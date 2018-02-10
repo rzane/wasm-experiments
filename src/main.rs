@@ -35,7 +35,15 @@ fn append_todo(text: &str) {
     let list = doc.query_selector("#todos").unwrap();
 
     let item = doc.create_element("li");
-    item.set_text_content(text);
+    let remove = doc.create_element("button");
 
+    item.set_text_content(text);
+    remove.set_text_content("Remove");
+
+    item.append_child(&remove);
     list.append_child(&item);
+
+    remove.add_event_listener(move |_: ClickEvent| {
+        list.remove_child(&item).is_ok();
+    });
 }
