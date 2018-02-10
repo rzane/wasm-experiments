@@ -1,7 +1,8 @@
 {
   "scripts": {
-    "start": "parcel index.html --no-hmr",
-    "clean": "rm -rf dist .cache target"
+    "todos": "parcel todos/index.html --no-hmr",
+    "bench": "parcel bench/index.html --no-hmr",
+    "clean": "rm -rf {todos,bench}/{dist,.cache,target}"
   },
   "dependencies": {
     "parcel-bundler": "^1.5.1",
