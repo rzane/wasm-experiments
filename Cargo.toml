@@ -1,0 +1,7 @@
+[package]
+name = "parcel-rust"
+version = "0.1.0"
+authors = ["ray@promptworks.com"]
+
+[dependencies]
+stdweb = "*"
